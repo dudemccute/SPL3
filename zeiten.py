@@ -1,27 +1,19 @@
 # zeiten.py
  
-def zeitInSekunden(h,m,s)
-    gesamt = 0
-    gesamt += h*3600
-    gesamt += m*60
-    gesamt += s 
-    return gesamt
+def zeitInSekunden(h,m,s):
+    return int(s) + (int(m)*60) + (int(h)*3600)
 
 beginnZeit = input("Beginnzeit: ")
 endZeit = input("Endezeit: ")
-#endeZeit = input("Endezeit: ")
+
 
 #Zeit im Format HH:MM:SS
 beginn = beginnZeit.split(":")
-print(beginn)
-
-h = int(beginn[0])
-m = int(beginn[1])
-s = int(beginn[2])
 
 print("Stunden",h)
 print("Minuten",m)
 print("Sekunden",s)
 
-beginnSekunden = s + m*60 + h*3600
+print(zeitInSekunden(beginnZeit[0], beginnZeit[1], beginnZeit[2]) - zeitInSekunden(endZeit[0], endZeit[1], endZeit[2]) )
+
 print("Gesamt Sekunden Beginn:",beginnSekunden)
