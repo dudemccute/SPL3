@@ -9,11 +9,9 @@ endZeit = input("Endezeit: ")
 
 #Zeit im Format HH:MM:SS
 beginn = beginnZeit.split(":")
+end = endZeit.split(":")
 
-print("Stunden",h)
-print("Minuten",m)
-print("Sekunden",s)
 
-print(zeitInSekunden(beginnZeit[0], beginnZeit[1], beginnZeit[2]) - zeitInSekunden(endZeit[0], endZeit[1], endZeit[2]) )
 
-print("Gesamt Sekunden Beginn:",beginnSekunden)
+print(zeitInSekunden(end[0], end[1], end[2]) - zeitInSekunden(beginn[0], beginn[1], beginn[2]))
+
